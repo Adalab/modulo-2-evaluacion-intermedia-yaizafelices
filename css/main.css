@@ -1,3 +1,15 @@
+* {
+    color: rgb(100, 98, 98);
+}
+
+.number {
+    height: 28px;
+    width: 300px;
+    background-color: rgb(224, 216, 216);
+    border: none;
+    border-radius: 5%;
+}
+
 
 .button  {
     height: 30px;
@@ -7,4 +19,14 @@
     border-radius: 10%;
     color: white;
     background-color: rgb(62, 189, 248) ;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;;
+}
+
+.text {
+    box-sizing: border-box;
 }
