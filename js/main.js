@@ -15,7 +15,11 @@ const changeTextClue = () => {
      let numberChosen = parseInt(numberInput.value);
      console.log(randomNumber);
 
-    if (numberChosen > randomNumber){
+    if (numberChosen < 0 || numberChosen > 100){
+        alert("Debe de ser un número entre 1 y 100");
+    }
+
+    else if (numberChosen > randomNumber){
         clue.innerHTML = "Pista: Número demasiado alto";
     }
 
