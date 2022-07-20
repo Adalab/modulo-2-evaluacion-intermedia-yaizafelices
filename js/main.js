@@ -12,7 +12,7 @@ function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
     };
 
-const changeTextClue = () => {
+const changeTextClue = (event) => {
      let numberChosen = parseInt(numberInput.value);
      console.log(randomNumber);
 
@@ -41,11 +41,9 @@ const changeNumberTry = () => {
 }
 
 
-function handleClick(ev) {
-    ev.preventDefault();
-
-    changeTextClue();
-    
+function handleClick(event) {
+    event.preventDefault();
+    changeTextClue();   
 };
 
 btn.addEventListener("click", handleClick);
