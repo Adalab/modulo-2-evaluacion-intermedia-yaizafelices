@@ -4,6 +4,7 @@ const numberInput = document.querySelector ('.js_number');
 const btn = document.querySelector ('.js_button');
 const clue = document.querySelector ('.js_clue');
 const tryNumber = document.querySelector ('.js_try');
+let numberOfTrys = 0;
 
 const randomNumber = getRandomNumber(100);
 
@@ -17,6 +18,7 @@ const changeTextClue = () => {
 
     if (numberChosen < 0 || numberChosen > 100){
         alert("Debe de ser un número entre 1 y 100");
+        return;
     }
 
     else if (numberChosen > randomNumber){
@@ -29,11 +31,13 @@ const changeTextClue = () => {
 
     else {
         clue.innerHTML = "¡¡¡HAS GANADO CAMPEONA!!!";
-}}
+    }
+    changeNumberTry();
+}
 
 const changeNumberTry = () => {
-    let numberOfTrys = parseInt(tryNumber.innerHTML);
-    tryNumber.innerHTML = numberOfTrys + 1;
+    numberOfTrys += 1;
+    tryNumber.innerHTML = numberOfTrys;
 }
 
 
@@ -41,7 +45,6 @@ function handleClick(ev) {
     ev.preventDefault();
 
     changeTextClue();
-    changeNumberTry();
     
 };
 
