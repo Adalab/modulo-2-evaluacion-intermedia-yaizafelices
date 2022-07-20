@@ -11,25 +11,21 @@ function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
     };
 
-// console.log(getRandomNumber(100));
-
-
 const changeTextClue = () => {
-
      let numberChosen = parseInt(numberInput.value);
+     console.log(randomNumber);
 
     if (numberChosen > randomNumber){
         clue.innerHTML = "Pista: Número demasiado alto";
     }
 
-    if else(numberChosen < randomNumber){
+    else if (numberChosen < randomNumber){
         clue.innerHTML = "Pista: Número demasiado bajo";
     }
 
-    if else(numberChosen === randomNumber){
+    else {
         clue.innerHTML = "¡¡¡HAS GANADO CAMPEONA!!!";
-    }
-}
+}}
 
 const changeNumberTry = () => {
     let numberOfTrys = parseInt(tryNumber.innerHTML);
@@ -46,4 +42,3 @@ function handleClick(ev) {
 };
 
 btn.addEventListener("click", handleClick);
-
