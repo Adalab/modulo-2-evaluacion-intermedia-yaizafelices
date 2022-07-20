@@ -15,9 +15,9 @@ function getRandomNumber(max) {
 const changeTextClue = (event) => {
      let numberChosen = parseInt(numberInput.value);
      console.log(randomNumber);
-
-    if (numberChosen < 0 || numberChosen > 100){
-        alert("Debe de ser un número entre 1 y 100");
+     
+     if (numberChosen < 0 || numberChosen > 100 || isNaN(numberChosen)){
+        alert("Debes introducir un número entre 1 y 100");
         return;
     }
 
