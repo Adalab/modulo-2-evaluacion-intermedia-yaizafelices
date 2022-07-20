@@ -18,19 +18,15 @@ const changeTextClue = () => {
 
      let numberChosen = parseInt(numberInput.value);
 
-    console.log(randomNumber);
-
-
-
     if (numberChosen > randomNumber){
         clue.innerHTML = "Pista: Número demasiado alto";
     }
 
-    if (numberChosen < randomNumber){
+    if else(numberChosen < randomNumber){
         clue.innerHTML = "Pista: Número demasiado bajo";
     }
 
-    if (numberChosen === randomNumber){
+    if else(numberChosen === randomNumber){
         clue.innerHTML = "¡¡¡HAS GANADO CAMPEONA!!!";
     }
 }
